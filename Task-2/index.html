@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Practice - Complete Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header with Flexbox Navigation -->
+    <header>
+        <nav>
+            <div class="logo">WebDev Practice</div>
+            <ul class="nav-links">
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#todo">To-Do</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contact Form Section (inside container) -->
+    <div class="container">
+        <section class="section" id="contact">
+            <h2>Contact Form with Validation</h2>
+            <form id="contactForm" novalidate>
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                    <div class="error-message">Please enter your full name</div>
+                    <div class="success-message">✓ Name looks good</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                    <div class="error-message">Please enter a valid email address</div>
+                    <div class="success-message">✓ Email is valid</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                    <div class="error-message">Please enter a valid phone number</div>
+                    <div class="success-message">✓ Phone number is valid</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject *</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Select a subject</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="support">Technical Support</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <div class="error-message">Please select a subject</div>
+                    <div class="success-message">✓ Subject selected</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required placeholder="Enter your message here..."></textarea>
+                    <div class="error-message">Please enter your message (minimum 10 characters)</div>
+                    <div class="success-message">✓ Message looks good</div>
+                </div>
+
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- To-Do List Section in a new container (below form) -->
+    <div class="container">
+        <section class="section" id="todo">
+            <h2>Dynamic To-Do List</h2>
+            
+            <div class="todo-input-container">
+                <input type="text" class="todo-input" id="todoInput" placeholder="Add a new task...">
+                <button class="add-btn" id="addTodoBtn">Add</button>
+            </div>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+
+            <div class="todo-list" id="todoList">
+                <!-- Dynamic content will be added here -->
+            </div>
+
+            <div class="todo-stats" id="todoStats">
+                <span id="totalTasks">0</span> total tasks, 
+                <span id="activeTasks">0</span> active, 
+                <span id="completedTasks">0</span> completed
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
