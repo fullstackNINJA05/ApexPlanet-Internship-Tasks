@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Learning Platform</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">LearnHub</div>
+          <nav>
+            <ul class="nav-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#courses">Courses</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <section class="hero">
+          <h1>Interactive Learning Platform</h1>
+          <p>
+            Discover engaging content, test your knowledge, and explore dynamic
+            learning experiences designed for the modern learner.
+          </p>
+        </section>
+
+        <!-- Knowledge Quiz Card -->
+        <div class="card">
+          <h2>Knowledge Challenge</h2>
+          <p>Test your understanding with our interactive quiz system.</p>
+
+          <div class="quiz-container">
+            <div class="question" data-question="0">
+              <h3>What does CSS stand for?</h3>
+              <div class="options">
+                <div class="option" data-answer="incorrect">
+                  Computer Style Sheets
+                </div>
+                <div class="option" data-answer="correct">
+                  Cascading Style Sheets
+                </div>
+                <div class="option" data-answer="incorrect">
+                  Creative Style Sheets
+                </div>
+              </div>
+            </div>
+
+            <div class="question" data-question="1" style="display: none">
+              <h3>
+                Which JavaScript method is used to add an element to an array?
+              </h3>
+              <div class="options">
+                <div class="option" data-answer="incorrect">append()</div>
+                <div class="option" data-answer="correct">push()</div>
+                <div class="option" data-answer="incorrect">add()</div>
+              </div>
+            </div>
+
+            <div class="question" data-question="2" style="display: none">
+              <h3>What is the purpose of media queries in CSS?</h3>
+              <div class="options">
+                <div class="option" data-answer="incorrect">
+                  To add animations
+                </div>
+                <div class="option" data-answer="correct">
+                  To create responsive designs
+                </div>
+                <div class="option" data-answer="incorrect">
+                  To import fonts
+                </div>
+              </div>
+            </div>
+
+            <div class="quiz-score" style="display: none"></div>
+          </div>
+        </div>
+
+        <!-- Interactive Carousel Card -->
+        <div class="card">
+          <h2>Learning Modules</h2>
+          <p>
+            Explore our comprehensive learning modules through this interactive
+            showcase.
+          </p>
+
+          <div class="carousel-container">
+            <div class="carousel-slides" id="carousel">
+              <div class="slide">
+                <div>
+                  <h3>Web Development Fundamentals</h3>
+                  <p>Master HTML, CSS, and JavaScript basics</p>
+                </div>
+              </div>
+              <div class="slide">
+                <div>
+                  <h3>Responsive Design Mastery</h3>
+                  <p>Create beautiful, mobile-first websites</p>
+                </div>
+              </div>
+              <div class="slide">
+                <div>
+                  <h3>JavaScript Advanced Concepts</h3>
+                  <p>Dive deep into modern JavaScript features</p>
+                </div>
+              </div>
+              <div class="slide">
+                <div>
+                  <h3>API Integration & Data</h3>
+                  <p>Connect your apps to external services</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-nav prev">‹</button>
+            <button class="carousel-nav next">›</button>
+          </div>
+
+          <div class="carousel-indicators">
+            <div class="indicator active"></div>
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+          </div>
+        </div>
+
+        <!-- Dynamic Content Card -->
+        <div class="card">
+          <h2>Live Content Feed</h2>
+          <p>
+            Discover fresh content from various sources to enhance your learning
+            experience.
+          </p>
+
+          <div class="api-section">
+            <div class="api-card">
+              <button class="api-button">Get Daily Joke</button>
+              <div class="api-content" id="joke-content">
+                Click to load a programming joke!
+              </div>
+            </div>
+
+            <div class="api-card">
+              <button class="api-button">Inspiration</button>
+              <div class="api-content" id="quote-content">
+                Click to get an inspiring quote!
+              </div>
+            </div>
+
+            <div class="api-card">
+              <button class="api-button">Fun Fact</button>
+              <div class="api-content" id="fact-content">
+                Click to discover an interesting fact!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
